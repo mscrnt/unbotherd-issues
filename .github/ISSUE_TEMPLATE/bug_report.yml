@@ -1,0 +1,93 @@
+name: Bug Report
+description: Report a problem or unexpected behavior in unbotherd
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue!
+        Please provide as much detail as possible so we can reproduce and fix the problem.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue and what you expected to happen instead.
+      placeholder: "When I unlock a group, notifications are not released..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Create a group
+        2. Add apps
+        3. Lock the group
+        4. Unlock manually
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Minor (cosmetic / annoyance)
+        - Moderate (feature partially broken)
+        - Major (core feature broken)
+        - Critical (app unusable or data loss)
+    validations:
+      required: true
+
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      placeholder: "e.g. 1.0.0"
+
+  - type: input
+    id: android_version
+    attributes:
+      label: Android version
+      placeholder: "e.g. Android 14"
+
+  - type: input
+    id: device
+    attributes:
+      label: Device model (optional)
+      placeholder: "e.g. Pixel 7, Galaxy S23"
+
+  - type: checkboxes
+    id: permissions
+    attributes:
+      label: Permissions granted
+      description: Check all that apply
+      options:
+        - label: Accessibility Service enabled
+        - label: Notification Listener enabled
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots (optional)
+      description: Paste logs or attach screenshots if available.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I confirm this issue does not contain personal or sensitive information
+          required: true

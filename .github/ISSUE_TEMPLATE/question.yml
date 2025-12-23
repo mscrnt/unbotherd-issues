@@ -1,0 +1,20 @@
+name: Question
+description: Ask a question about how unbotherd works
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Ask your question clearly and concisely.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I confirm this question does not include personal or sensitive information
+          required: true

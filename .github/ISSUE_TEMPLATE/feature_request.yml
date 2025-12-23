@@ -1,0 +1,50 @@
+name: Feature Request
+description: Suggest an idea or improvement for unbotherd
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your idea!
+        Please explain the problem you're trying to solve and how this feature would help.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What problem does this feature solve?
+      placeholder: "I want to lock apps multiple times per day..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe how you imagine this feature working.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you considered any other approaches?
+
+  - type: dropdown
+    id: importance
+    attributes:
+      label: Importance
+      options:
+        - Nice to have
+        - Would improve usability
+        - Critical for my workflow
+
+  - type: checkboxes
+    id: monetization
+    attributes:
+      label: Monetization awareness
+      options:
+        - label: I understand some features may be part of the Pro version
+          required: true
